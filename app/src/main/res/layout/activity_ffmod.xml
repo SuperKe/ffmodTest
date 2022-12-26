@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ffmod.FFmodActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_pitch_half"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="音调调整0.5倍" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_pitch_double"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="音调调整2倍" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_echo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="回音" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_mixer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="多声轨混音" />
+</LinearLayout>
