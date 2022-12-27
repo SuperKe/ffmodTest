@@ -2,7 +2,8 @@
 # documentation: https://d.android.com/studio/projects/add-native-code.html
 
 # Sets the minimum version of CMake required to build the native library.
-
+# Declares and names the project.
+project("ffmodtest")
 cmake_minimum_required(VERSION 3.10.2)
 
 # 批量导入cpp
@@ -12,11 +13,7 @@ file(GLOB allCpp *.c *.h *.cpp)
 include_directories("inc")
 
 #导入库文件
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/..../libs/${CMAKE_ANDROID_ARCH_ABI}")
-
-# Declares and names the project.
-
-project("ffmodtest")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/../../../libs/${CMAKE_ANDROID_ARCH_ABI}")
 
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.

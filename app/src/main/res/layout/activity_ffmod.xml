@@ -9,6 +9,12 @@
     tools:context=".ffmod.FFmodActivity">
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="原声" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_pitch_half"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
