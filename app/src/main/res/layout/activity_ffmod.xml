@@ -27,6 +27,12 @@
         android:text="音调调整2倍" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="倍速" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_echo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,4 +43,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="多声轨混音" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止播放" />
 </LinearLayout>

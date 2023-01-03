@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.blankj.utilcode.util.PathUtils
+import com.blankj.utilcode.util.ThreadUtils
 import com.example.ffmodtest.databinding.ActivityFfmodBinding
 import org.fmod.FMOD
 import java.io.File
@@ -17,20 +18,44 @@ class FFmodActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnNormal.setOnClickListener {
-            changeVoice(path, 0)
+            Thread {
+                stop()
+                playVoice(path, 0)
+            }.start()
         }
 
         binding.btnPitchHalf.setOnClickListener {
-            changeVoice(path, 1)
+            Thread {
+                stop()
+                playVoice(path, 1)
+            }.start()
         }
         binding.btnPitchDouble.setOnClickListener {
-            changeVoice(path, 2)
+            Thread {
+                stop()
+                playVoice(path, 2)
+            }.start()
         }
         binding.btnEcho.setOnClickListener {
-            changeVoice(path, 3)
+            Thread{
+                stop()
+                playVoice(path, 3)
+            }.start()
         }
         binding.btnMixer.setOnClickListener {
-            changeVoice(path, 4)
+            Thread{
+                stop()
+                playVoice(path, 4)
+            }.start()
+        }
+        binding.btnSpeed.setOnClickListener {
+            Thread{
+                stop()
+                playVoice(path, 5)
+            }.start()
+        }
+        binding.btnStop.setOnClickListener {
+            stop()
         }
     }
 
@@ -41,10 +66,13 @@ class FFmodActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        stop()
         FMOD.close()
     }
 
-    external fun changeVoice(voicePath: String, mode: Int)
+    external fun playVoice(voicePath: String, mode: Int)
+
+    external fun stop()
 
     companion object {
         init {
